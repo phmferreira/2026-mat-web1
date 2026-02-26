@@ -1,2 +1,3 @@
 Minha página principal!
 
+Aqui colocamos o feed de notícias do site!
