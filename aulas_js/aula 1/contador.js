@@ -14,6 +14,13 @@ function colocarIncrementar() {
     document
         .querySelector('button')
         .onclick = incrementar;
+    
+    // document
+    //     .querySelector('#contador')
+    //     .addEventListener(
+    //         'click',
+    //         incrementar
+    //     );
 }
 
 document
