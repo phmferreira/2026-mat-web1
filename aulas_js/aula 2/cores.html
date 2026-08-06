@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cores</title>
+    <script>
+        function mudarCor(cor) {
+            document.querySelector('#titulo')
+                .style.color = cor;
+        }
+        const mudarVermelho = function() {
+            mudarCor('red');
+        }
+        const mudarVerde = () => {
+            mudarCor('green');
+        }
+        const mudarAzul = () => mudarCor('blue');
+
+        document
+            .addEventListener(
+                'DOMContentLoaded',
+                () => {
+                    document
+                        .querySelector('#vermelho')
+                        .onclick = mudarVermelho;
+                    document
+                        .querySelector('#verde')
+                        .onclick = mudarVerde;
+                    document
+                        .querySelector('#azul')
+                        .onclick = mudarAzul;
+                }
+            );
+    </script>
+</head>
+<body>
+    <h1 id="titulo">Olá, bem-vindo!</h1>
+    <button id="vermelho">Vermelho</button>
+    <button id="verde">Verde</button>
+    <button id="azul">Azul</button>
+</body>
+</html>
