@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cores</title>
+    <script>
+        function colocarOnClick(botao){
+            botao.onclick = function(){
+                document.querySelector('#titulo')
+                    .style
+                    .color = botao.dataset.color;
+            }
+        }
+        document.addEventListener('DOMContentLoaded',
+            function(){
+                // maneira imperativa
+                // const botoes = 
+                //     document.querySelectorAll('button');
+                // for(let i = 0; i < botoes.length; i=i+1){
+                //     colocarOnClick(botoes[i]);
+                // }
+
+                // maneira funcional
+                const botoes = 
+                    document.querySelectorAll('button');
+                botoes.forEach(
+                    botao => colocarOnClick(botao)
+                );
+            }
+        );
+    </script>
+</head>
+<body>
+    <h1 id="titulo">Olá, bem-vindo!</h1>
+    <button data-color="red">Vermelho</button>
+    <button data-color="green">Verde</button>
+    <button data-color="blue">Azul</button>
+</body>
+</html>
