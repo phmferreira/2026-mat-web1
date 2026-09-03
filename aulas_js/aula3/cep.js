@@ -9,7 +9,11 @@ document
                     fetch(`https://viacep.com.br/ws/${cep}/json/`)
                         .then((response) => response.json())
                         .then((dataJson) => {
-                            console.log(dataJson);
+                            // console.log(dataJson);
+                            document
+                                .querySelector('#resultado')
+                                .innerHTML = dataJson.localidade;
                         });
+                    return false;
                 }
 });
